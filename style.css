@@ -1,10 +1,10 @@
 body{
     background-color: black;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover;
-    background-position: center-center;
+    background-position: center;
     background-attachment: fixed;
-    background-image: url("https://images.unsplash.com/photo-1760340769739-653d00200baf?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170");
+    background-image: url("https://images.unsplash.com/photo-1660311466787-419b75305c13?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070");
 
 }
 
@@ -16,7 +16,7 @@ div.container{
     border-radius: 30px;
     border:  1px solid rgba(240, 248, 255, 0.656);
     backdrop-filter: blur(15px);
-    box-shadow: 5px 5px 5px 5px #d0d0d084;
+    box-shadow: 5px 5px 5px 5px #d0d0d03e;
 }
 div.rosto{
     transform: translateX(-50%); /* centralizahorizontalmente */
@@ -35,14 +35,14 @@ div.rosto{
     background-color: black ;
     border:1px inset rgba(255, 255, 255, 0.548);
     backdrop-filter: blur(15px);
-    box-shadow: 0 0 20px rgba(233, 233, 233, 0.464);
+    box-shadow: 0 0 20px rgba(233, 233, 233, 0.679);
 
 
 }
 
 .rosto:hover{
     padding: 10px;
-    transition: 0.5s;
+    transition: 0.3s;
  
 
 }
@@ -52,7 +52,7 @@ h1.nome{
     position: relative;
     top: -3rem;
     text-decoration: line-through;
-    color: #3c3c3ce9;;
+    color: #d1cecee9;;
 }
 h2.arromba{
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -93,7 +93,7 @@ p{
     font-family: 'Times New Roman', Times, serif;
     text-decoration: underline;
     font-weight: bolder;
-    color:  #3c3c3ce9;
+    color:  #aca8a8e9;
 }
 a:hover{
     transform: scale(1.05);
@@ -122,3 +122,24 @@ a:hover::before{
 
 }
 
+.nome{
+    font-size: 40px;
+    font-weight: bold;
+    color: transparent;
+    background-image: url('https://images.unsplash.com/photo-1744024450738-b040cffc7ff9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1228'); 
+    background-size: 200%; /* Enlarged for smooth animation */
+    background-position: 0 50%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-background 5s infinite alternate linear;
+}
+
+@keyframes animate-background {
+    0% {
+        background-position: 0 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
