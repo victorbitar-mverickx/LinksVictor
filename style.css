@@ -27,7 +27,7 @@ div.rosto{
     right: 50%;
     top: -4rem;
     background-image: url("https://images.unsplash.com/photo-1669646749614-f4d1debf84be?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=687");
-     background-repeat: no-repeat;
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center-center;
     background-attachment: fixed;
@@ -35,15 +35,15 @@ div.rosto{
     background-color: black ;
     border:1px inset rgba(255, 255, 255, 0.548);
     backdrop-filter: blur(15px);
-     box-shadow: 2px 2px 2px 2px #2222224a;
+    box-shadow: 0 0 20px rgba(233, 233, 233, 0.464);
 
 
 }
 
 .rosto:hover{
     padding: 10px;
-    transition: 0.6s ;
-    transform: rotateY('360deg');
+    transition: 0.5s;
+ 
 
 }
 h1.nome{
@@ -82,6 +82,8 @@ a{
     align-items: center;
     justify-content: center;
     gap: 15px;
+    overflow: hidden;
+      transition: all 0.5s ease;
 }
 p{
     position: relative;
@@ -94,9 +96,29 @@ p{
     color:  #3c3c3ce9;
 }
 a:hover{
-    background-color: rgb(85, 87, 87);
-    transition-duration: 0.7s;
-    padding: 20px;
-    box-shadow: 10px 5px insetrgb(85, 87, 87);
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(233, 233, 233, 0.679);
+}
+a::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(255, 255, 255, 0.733)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+a:hover::before{
+    opacity: 1;
+    transform: rotate(-45deg) translateY(100%);
 
 }
+
